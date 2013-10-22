@@ -1,6 +1,7 @@
 ddig Build Notes
 ================
 
+Prerequisites: boost
 
 Command:
 

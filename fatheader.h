@@ -1,7 +1,7 @@
 #include <boost/iostreams/device/mapped_file.hpp>
 #include <iostream>
 
-lsing namespace boost;
+using namespace boost;
 using namespace boost::iostreams;
 
 class fatheader
@@ -15,7 +15,7 @@ public:
 	long get_size();
 
 public:
-	char[8] oem_name();
+	//char[8] oem_name();
 
 private:
 	mapped_file_source _fat_file;
