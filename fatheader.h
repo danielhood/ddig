@@ -13,12 +13,14 @@ public:
 public:
 	bool init(mapped_file_source& fat_file);
 	long get_size();
+	uint8_t get_byte(long index);
 
 public:
-	//char[8] oem_name();
+	char oem_name[9];
 
 private:
 	mapped_file_source _fat_file;
 
+	void process_boot_sector();
 
 };

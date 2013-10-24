@@ -17,7 +17,9 @@ int main(int argc, char **argv)
 	}
 	else
 	{
+		cout << "Sig: "  << hex << int(fh->get_byte(0x1fe)) << hex << int(fh->get_byte(0x1ff)) << endl;
 		cout << "Size: " << fh->get_size() << endl;
+		cout << "OEM Name: " << fh->oem_name << endl;
 	}
 
 	delete fh;
