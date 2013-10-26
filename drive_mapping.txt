@@ -1,7 +1,7 @@
 00000000:00808600 - Partition Info/FAT Info/etc
 00808600:014e4968 - RIFF_000.wav
 014e5600:014e6600 - Directory (x1)
-014e6600:04f98600 - RAW Audio Takes (15026 clusters/  120208 sectors / 58 MB) sox -r44100 -s -c1 -2 014e6600.raw 014e6600.wav
+014e6600:04f98600 - RAW Audio Takes (Tascam Demo Tracks) (15026 clusters/  120208 sectors / 58 MB) sox -r44100 -s -c1 -2 014e6600.raw 014e6600.wav
 04f99600:04f9c600 - Directory (x4)
 04f9c600:04fa3600 - System File (7 clusters / 56 sectors / 28 KB)
 04fa3600:067a4074 - RIFF_001.wav
@@ -42,12 +42,24 @@ a2b00600:43c301600 - Audio takes (see below)
 
 dd if=samsung_dump_40gb.img of=1002b1600.raw skip=8394123 count=216016
 sox -r44100 -s -c1 -2 1002b1600.raw 1002b1600.wav
+genisoimage -r -J -o iso/mike_tascam_1.iso mike_tascam_1
+growisofs -dvd-compat -Z /dev/sr0=iso/mike_tascam_1.iso
 
+mike_tascam_1
+RIFF_*.wav
+014e6600.wav
+1f3a4600.wav
+
+mike_tascam_2
+2ab25600:66b25600 - Audio Takes (245760 clusters / 1966080 sectors / 960 MB)
+66000600:67000600 - 32768 sectors / 16 MB <-- for "Moon and Stars" clip
 1002b1600:13C2b1600 - Audio Takes (245760 clusters / 1966080 sectors / 960 MB)
 130000600:16C000600 - Audio Takes
 160000600:19C000600 - 
 190000600:1cc000600
 1c0000600:1fc000600
+
+mike_tascam_3
 1f0000600:22c000600
 220000600:25c000600
 250000600:28c000600
@@ -55,6 +67,8 @@ sox -r44100 -s -c1 -2 1002b1600.raw 1002b1600.wav
 2a0000600:2dc000600
 2d0000600:30c000600
 300000600:33c000600
+
+mike_tascam_4
 330000600:36c000600
 360000600:36c000600
 390000600:3cc000600
