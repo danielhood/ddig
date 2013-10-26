@@ -1,6 +1,6 @@
 CC=g++-4.8.2
 
-CFLAGS=-static
+CFLAGS=-static -std=c++11
 
 INCS=-I. -I/usr/local
 

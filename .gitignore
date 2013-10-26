@@ -1,2 +1,6 @@
+ddig
+*.o
 *.img
 *.swp
+*.wav
+*.raw

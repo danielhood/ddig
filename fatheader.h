@@ -16,11 +16,14 @@ public:
 	uint8_t get_byte(long index);
 
 public:
+	const long MBR_OFFSET = 0;
+	const long VBR_OFFSET = 0x0200;
 	char oem_name[9];
 
 private:
 	mapped_file_source _fat_file;
 
 	void process_boot_sector();
+	const char* _data;
 
 };
