@@ -1,0 +1,98 @@
+00000000:00808600 - Partition Info/FAT Info/etc
+00808600:014e4968 - RIFF_000.wav
+014e5600:014e6600 - Directory (x1)
+014e6600:04f98600 - RAW Audio Takes (15026 clusters/  120208 sectors / 58 MB) sox -r44100 -s -c1 -2 014e6600.raw 014e6600.wav
+04f99600:04f9c600 - Directory (x4)
+04f9c600:04fa3600 - System File (7 clusters / 56 sectors / 28 KB)
+04fa3600:067a4074 - RIFF_001.wav
+067a4600:09e8d468 - RIFF_002.wav
+09e8d600:10807600 - File/Folder listings (27002 clusters / 216016 sectors/ 105 MB)
+10807600:1080a600 - Directory (x3)
+1080a600:127aadec - RIFF_003.wav
+127ab600:1497a4c4 - RIFF_004.wav
+1497a600:16d695ec - RIFF_005.wav
+16d69600:18e1202c - RIFF_006.wav
+18e12600:229ad604 - RIFF_007.wav - INVALID RIFF HEADER
+19e7b600:23a16604 - RIFF_008.wav - INVALID RIFF HEADER
+19e7d600:1c1939a4 - RIFF_009.wav - INVALID RIFF HEADER
+19e7e600:1c1949a4 - RIFF_010.wav - INVALID RIFF HEADER
+19e7f600:1b683d54 - RIFF_011.wav - INVALID RIFF HEADER
+19e80600:1b684d54 - RIFF_012.wav - INVALID RIFF HEADER
+19e81600:1bd8116c - RIFF_013.wav - INVALID RIFF HEADER
+19e82600:1bd8216c - RIFF_014.wav - INVALID RIFF HEADER
+19e83600:1d3e5cac - RIFF_015.wav - INVALID RIFF HEADER
+19e84600:1d3ef67c - RIFF_016.wav - INVALID RIFF HEADER
+19e85600:1a0e8edc - RIFF_017.wav - INVALID RIFF HEADER
+19e86600:1e8d640c - RIFF_018.wav - INVALID RIFF HEADER
+19e87600:1c34516c - RIFF_019.wav - INVALID RIFF HEADER
+19e88600:24a951e0 - RIFF_020.wav - INVALID RIFF HEADER
+19e89600:24a961e0 - RIFF_021.wav - INVALID RIFF HEADER
+19e8f600:1bf3802c - RIFF_022.wav
+1bf38600:1f3a3e0c - RIFF_023.wav
+1f3a4600:1f6b4600 - Happy Mothers Day Mom (310 clusters / 2480 sectors / 1.2 MB)
+1f6b4600:20b50054 - RIFF_024.wav
+20b50600:24239468 - RIFF_025.wav
+24239600:2664ad68 - RIFF_026.wav
+2664b600:2ab2507c - RIFF_027.wav
+2ab25600:66b25600 - Audio Takes (245760 clusters / 1966080 sectors / 960 MB)
+66b00600:a2b00600 - Mostly Silence (245760 clusters / 1966080 sectors / 960 MB)
+66000600:67000600 - 32768 sectors / 16 MB <-- for "Moon and Stars" clip
+a2b00600:43c301600 - Audio takes (see below)
+43c301600:953C94000 - EMPTY (with a bit of data near the end)
+
+dd if=samsung_dump_40gb.img of=1002b1600.raw skip=8394123 count=216016
+sox -r44100 -s -c1 -2 1002b1600.raw 1002b1600.wav
+
+1002b1600:13C2b1600 - Audio Takes (245760 clusters / 1966080 sectors / 960 MB)
+130000600:16C000600 - Audio Takes
+160000600:19C000600 - 
+190000600:1cc000600
+1c0000600:1fc000600
+1f0000600:22c000600
+220000600:25c000600
+250000600:28c000600
+280000600:2ac000600
+2a0000600:2dc000600
+2d0000600:30c000600
+300000600:33c000600
+330000600:36c000600
+360000600:36c000600
+390000600:3cc000600
+3c0000600:3fc000600
+3f0000600:42c000600
+420000600:43c301600
+
+dd if=samsung_dump_40gb.img of=160000600.raw skip=11534339 count=1966080
+dd if=samsung_dump_40gb.img of=190000600.raw skip=13107203 count=1966080
+dd if=samsung_dump_40gb.img of=1c0000600.raw skip=14680067 count=1966080
+dd if=samsung_dump_40gb.img of=1f0000600.raw skip=16252931 count=1966080
+dd if=samsung_dump_40gb.img of=220000600.raw skip=17825795 count=1966080
+dd if=samsung_dump_40gb.img of=250000600.raw skip=19398659 count=1966080
+dd if=samsung_dump_40gb.img of=280000600.raw skip=20971523 count=1966080
+dd if=samsung_dump_40gb.img of=2a0000600.raw skip=22544387 count=1966080
+dd if=samsung_dump_40gb.img of=2d0000600.raw skip=24117251 count=1966080
+dd if=samsung_dump_40gb.img of=300000600.raw skip=25690115 count=1966080
+dd if=samsung_dump_40gb.img of=330000600.raw skip=27262979 count=1966080
+dd if=samsung_dump_40gb.img of=360000600.raw skip=28835843 count=1966080
+dd if=samsung_dump_40gb.img of=390000600.raw skip=30408707 count=1966080
+dd if=samsung_dump_40gb.img of=3c0000600.raw skip=31981571 count=1966080
+dd if=samsung_dump_40gb.img of=3f0000600.raw skip=33554435 count=1966080
+dd if=samsung_dump_40gb.img of=420000600.raw skip=35127299 count=923656
+sox -r44100 -s -c1 -2 160000600.raw 160000600.wav
+sox -r44100 -s -c1 -2 190000600.raw 190000600.wav
+sox -r44100 -s -c1 -2 1c0000600.raw 1c0000600.wav
+sox -r44100 -s -c1 -2 1f0000600.raw 1f0000600.wav
+sox -r44100 -s -c1 -2 220000600.raw 220000600.wav
+sox -r44100 -s -c1 -2 250000600.raw 250000600.wav
+sox -r44100 -s -c1 -2 280000600.raw 280000600.wav
+sox -r44100 -s -c1 -2 2a0000600.raw 2a0000600.wav
+sox -r44100 -s -c1 -2 2d0000600.raw 2d0000600.wav
+sox -r44100 -s -c1 -2 300000600.raw 300000600.wav
+sox -r44100 -s -c1 -2 330000600.raw 330000600.wav
+sox -r44100 -s -c1 -2 360000600.raw 360000600.wav
+sox -r44100 -s -c1 -2 390000600.raw 390000600.wav
+sox -r44100 -s -c1 -2 3c0000600.raw 3c0000600.wav
+sox -r44100 -s -c1 -2 3f0000600.raw 3f0000600.wav
+sox -r44100 -s -c1 -2 420000600.raw 420000600.wav
+
+
